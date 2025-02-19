@@ -83,8 +83,52 @@ body{
 }
 
 @media screen and (max-width: 767px) {
+    .feature {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .feature .item {
+        width: 100%;
+        height: 80px;
+    }
+
+    .sign {
+        order: 2;
+    }
+
+    .content {
+        order: 1;
+    }
+
+    .feature {
+        order: 3;
+    }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-    
+    .feature {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .feature .item {
+        width: 50%;
+        height: 100px;
+    }
+
+    .feature .item:last-child {
+        width: 100%;
+    }
+
+    .sign {
+        order: 2;
+    }
+
+    .content {
+        order: 1;
+    }
+    .feature{
+        order: 3;
+    }
 }

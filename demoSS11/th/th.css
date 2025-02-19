@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    border: 1px solid rgb(110, 110, 110);
+    margin: 10px;
+    
+}
+
+.header {
+    height: 56px;
+    padding: 0 48px;
+    border-bottom: 1px soli gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: red;
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: red;
+    border: none;
+}
+
+.layout {
+    width: 100%;
+    padding: 10px 48px;
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.layout .main-content {
+    display: flex;
+    gap: 10px;
+}
+
+.layout .main-content .item{
+    border: 1px solid rgb(188, 188, 188);
+    border-radius: 8px;
+    height: 100px;
+    padding: 10px;
+}
+
+.category {
+    flex: 1;
+}
+
+.content {
+    flex: 2;
+}
+
+.list-post {
+    margin-top: 10px;
+}
+
+.list-post ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.post-item {
+    flex: 1;
+    border: 1px solid rgb(188, 188, 188);
+    border-radius: 8px;
+    height: 100px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 48px;
+}
+
+.menu-bar {
+    font-size: 24px;
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .menu-bar {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .header {
+        padding: 0 24px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .layout {
+        padding: 12px 24px;
+    }
+
+    .post-item {
+        flex-basis: calc(100% - 12px);
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .footer-left {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .post-item {
+        flex-basis: calc(50% - 12px);
+    }
+}
+
+
